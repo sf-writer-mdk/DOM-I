@@ -113,3 +113,8 @@ contact.children[3].innerText = siteContent.contact.email
 // ! footer
 const footerP = document.querySelector('footer p')
 footerP.innerText = siteContent.footer.copyright
+
+// ! prepend and append
+
+containerNav.append('append')
+containerNav.prepend('prepend')
