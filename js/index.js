@@ -56,6 +56,10 @@ containerNav.children[3].textContent = siteContent.nav['nav-item-4']
 containerNav.children[4].textContent = siteContent.nav['nav-item-5']
 containerNav.children[5].textContent = siteContent.nav['nav-item-6']
 
+// ! nav links color green
+const links = document.querySelectorAll('header nav a')
+links.forEach((link) => (link.style.color = 'green'))
+
 // ! CTA
 const ctaDOM = document.querySelector('.cta-text')
 ctaDOM.innerHTML = '<h1>DOM<br>Is<br>Awesome</h1><button>Get Started</button>'
@@ -65,5 +69,47 @@ ctaImg.setAttribute('src', siteContent.cta['img-src'])
 // ctaImage.src = siteContent.cta['img-src'] //*alternative way
 // **************************************************************************
 
-const product = document.querySelector('.text-content h4')
-product.innerText = siteContent['main-content']['product-h4']
+// ! top-content
+const topContentDiv = document.querySelector('.top-content')
+topContentDiv.children[0].children[0].innerText =
+  siteContent['main-content']['features-h4']
+topContentDiv.children[0].children[1].innerText =
+  siteContent['main-content']['features-content']
+
+topContentDiv.children[1].children[0].innerText =
+  siteContent['main-content']['about-h4']
+topContentDiv.children[1].children[1].innerText =
+  siteContent['main-content']['about-content']
+
+// ! middle-image
+
+const middleImg = document.querySelector('#middle-img')
+middleImg.setAttribute('src', siteContent['main-content']['middle-img-src'])
+
+// ! bottom-content
+const bottomContentDiv = document.querySelector('.bottom-content')
+topContentDiv.children[0].children[0].innerText =
+  siteContent['main-content']['services-h4']
+bottomContentDiv.children[0].children[1].innerText =
+  siteContent['main-content']['services-content']
+
+bottomContentDiv.children[1].children[0].innerText =
+  siteContent['main-content']['product-h4']
+bottomContentDiv.children[1].children[1].innerText =
+  siteContent['main-content']['product-content']
+
+bottomContentDiv.children[2].children[0].innerText =
+  siteContent['main-content']['vision-h4']
+bottomContentDiv.children[2].children[1].innerText =
+  siteContent['main-content']['vision-content']
+
+// ! contact
+const contact = document.querySelector('.contact')
+contact.children[0].innerText = siteContent.contact['contact-h4']
+contact.children[1].innerText = siteContent.contact.address
+contact.children[2].innerText = siteContent.contact.phone
+contact.children[3].innerText = siteContent.contact.email
+
+// ! footer
+const footerP = document.querySelector('footer p')
+footerP.innerText = siteContent.footer.copyright
