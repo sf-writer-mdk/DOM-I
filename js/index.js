@@ -56,6 +56,16 @@ containerNav.children[3].textContent = siteContent.nav['nav-item-4']
 containerNav.children[4].textContent = siteContent.nav['nav-item-5']
 containerNav.children[5].textContent = siteContent.nav['nav-item-6']
 
+// ! prepend and append
+
+appendA = document.createElement('a')
+appendA.innerText = 'CREATIVITY'
+containerNav.append(appendA)
+
+prependA = document.createElement('a')
+prependA.innerText = 'IDEAS'
+containerNav.prepend(prependA)
+
 // ! nav links color green
 const links = document.querySelectorAll('header nav a')
 links.forEach((link) => (link.style.color = 'green'))
@@ -113,8 +123,3 @@ contact.children[3].innerText = siteContent.contact.email
 // ! footer
 const footerP = document.querySelector('footer p')
 footerP.innerText = siteContent.footer.copyright
-
-// ! prepend and append
-
-containerNav.append('append')
-containerNav.prepend('prepend')
